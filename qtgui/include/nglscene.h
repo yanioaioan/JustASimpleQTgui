@@ -1,16 +1,20 @@
 #ifndef NGLSCENE_H
 #define NGLSCENE_H
 
-#include <QGLWidget>
+//#include <QGLWidget>//old way of doing it (with legacy QGLWidget)
 
-class NGLScene: public QGLWidget
+#include <ngl/Random.h>
+
+#include <QOpenGLWidget>
+
+class NGLScene: public QOpenGLWidget
 {
     Q_OBJECT
 public:
-    NGLScene(QWidget *_parent);
+    NGLScene(/*QWidget *_parent*/);
     ~NGLScene();
 
-    float m_rColor;
+    float m_rColor,m_gColor,m_bColor;
 
 protected:
     void initializeGL ();

@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    m_gl=new NGLScene(this);
+    m_gl=new NGLScene();
     ui->gridLayout->addWidget (m_gl,0,0,2,1);
 
     //manual signal-slot connection
@@ -23,6 +23,8 @@ void MainWindow::on_pushButton_clicked()
 {
     //auto signal-slot connection
     std::cout<<"Button Clicked - auto signal-slot connection"<<std::endl;
-    m_gl->m_rColor=1;
-    m_gl->updateGL ();
+    m_gl->m_rColor=0.2;
+    m_gl->m_rColor=0.5;
+    m_gl->m_rColor=0.6;
+    m_gl->update();
 }
