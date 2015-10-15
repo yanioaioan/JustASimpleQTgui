@@ -6,9 +6,13 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
     m_gl=new NGLScene();
     ui->gridLayout->addWidget (m_gl,0,0,2,1);
+
+    this->setWindowTitle("Change Colors Form - / (QOpenGLWidget & QMainWindow) ");
+
 
     //manual signal-slot connection
     connect(ui->pushButton, SIGNAL(clicked(bool)),  m_gl, SLOT(testButtonClicked(bool)) );
