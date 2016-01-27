@@ -7,7 +7,6 @@ NGLScene::NGLScene(/*QWidget *_parent*/)//: QGLWidget(_parent)
     m_rColor=1;
     m_gColor=1;
     m_bColor=1;
-//    this->resize(_parent->size ());
 }
 
 NGLScene::~NGLScene()
