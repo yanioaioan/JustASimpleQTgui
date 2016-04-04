@@ -8,6 +8,8 @@ SOURCES += src/*.cpp
 FORMS += \
     mainwindow.ui
 
+CONFIG +=c++11
+
 HEADERS += include/*.h
 
 OBJECTS_DIR+=obj
